@@ -1,55 +1,39 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key});
-/**
- * Row dan colum bisa memiliki banyak wiget 
- * Row itu kesamping
- * Colum itu ke bawah
- * 
- */
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Dzaka Anis Karim"),
-
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.deepOrange,
+        title: const Text(
+          'My Profile',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
-        body: Column(
-          children: <Widget>[
-            Container(
-              child: Text(
-                'Nama',
-                strutStyle: TextStyle(
-                  color: Colors.amberAccent,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                  backgroundColor: const Color.fromARGB(255, 203, 51, 17),
-                  fontFamily: 'Poppins',
-
-                )
-              ),
-            )
-           
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
             Text(
-              'UCUP',
-              style: TextStyle(
-                backgroundColor: Color.fromARGB(
-                  200, 
-                  100, 
-                  100, 
-                  100,
-                ),
-              ),
+              'Bambang Slebew',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            Row(
+              children: <Widget>[
+                Column(
+                  children: <Widget>[],
+                )
+                Column(
+                  children: <Widget>[],
+                )
+              ],
             )
           ],
         ),
       ),
-      debugShowCheckedModeBanner: false,
     );
-
   }
 }
