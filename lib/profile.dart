@@ -51,6 +51,32 @@ class ProfileCard extends StatelessWidget {
                     'Bambang Slebew',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
+                  Row(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                              width: MediaQuery.of(context).size.width * 0.5,
+                              decoration: BoxDecoration(
+                                color: Colors.amberAccent,
+                                borderRadius: BorderRadius.circular(15,)
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Address'),
+                              )
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Column(),
+                    ],
+                  )
                 ],
               ),
             ),
