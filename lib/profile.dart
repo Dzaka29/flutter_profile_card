@@ -18,8 +18,8 @@ class ProfileCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: MediaQuery.of(context).size.width * 0.8,
-              height: 100,
+             
+              height: 300,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.amberAccent,
@@ -52,6 +52,7 @@ class ProfileCard extends StatelessWidget {
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -60,9 +61,8 @@ class ProfileCard extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Container(
-                              width: MediaQuery.of(context).size.width * 0.5,
                               decoration: BoxDecoration(
-                                color: Colors.amberAccent,
+                                color: const Color.fromARGB(255, 255, 64, 64),
                                 borderRadius: BorderRadius.circular(15,)
                               ),
                               child: Padding(
@@ -74,18 +74,30 @@ class ProfileCard extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Column(),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                              
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(255, 227, 24, 24),
+                                borderRadius: BorderRadius.circular(15)
+                              ),
+                              child: 
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Tempat tanggal lahirr'),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
                     ],
                   )
                 ],
               ),
             ),
-            Column(
-              children: <Widget>[],
-            ),
-            Column(
-              children: <Widget>[],
-            )
           ],
         ),
       ),
