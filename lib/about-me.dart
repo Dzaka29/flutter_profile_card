@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class AboutMe extends StatelessWidget {
@@ -13,7 +15,19 @@ final List<String> badges = const <String>[
   '📕',
   '🥰',
   '🤫'
-  ]; 
+  ];
+final List<String> gambaracak = const<String>[
+  'https://images.unsplash.com/photo-1761375002691-c86d054e96be?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1770',
+  'https://plus.unsplash.com/premium_photo-1761211419929-8a793c3b7587?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2232',
+  'https://images.unsplash.com/photo-1761483548106-9f225d1e4313?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1770',
+  'https://images.unsplash.com/photo-1761530622114-5572fb33cdf1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1673',
+  'https://images.unsplash.com/photo-1761502208867-42cc214fd0e6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1770',
+  'https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1770',
+  'https://images.unsplash.com/photo-1761477102698-634668f83bee?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1771',
+  'https://plus.unsplash.com/premium_photo-1759256104503-80fe92559651?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1770',
+  'https://images.unsplash.com/photo-1761389294347-4e7b17731a5b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2076',
+  'https://plus.unsplash.com/premium_photo-1761331960506-9f1bb0e4d029?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2224',
+];
  @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -306,13 +320,72 @@ final List<String> badges = const <String>[
                           child: Center(
                             child: Text('${element}', style: TextStyle(
                               fontSize: 60
-                            ),),
+                              ),
+                            ),
                           ),
                         ),
                       );
                     }).toList(),
                   ),
                 ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.cyanAccent,
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical:  8.0),
+                    child: Text(
+                      'Images',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        letterSpacing: 5,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        color: Colors.redAccent
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 110,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: gambaracak.map((image){
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage(image),
+                          radius: 50,
+                          child: Center(
+                            child: Image.network(
+                              '${image}',
+                            
+                            ),
+                          ),
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                ),
+                SizedBox(
+                  height: 110,
+                  child: ListView.builder(itemCount: gambaracak.length, itemBuilder: (BuildContext context, int index){
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: CircleAvatar(
+                        backgroundImage: NetworkImage('${gambaracak[index]}'),
+                        radius: 50,
+                      ),
+                    );
+                   }
+                  ),
+                )
               ],
             ),
           ),
