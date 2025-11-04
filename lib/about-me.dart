@@ -1,34 +1,35 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/detail_profil.dart';
 
 class AboutMe extends StatelessWidget {
   const AboutMe({super.key});
-final List<String> badges = const <String>[ 
-  '😁',
-  '🙏',
-  '📚',
-  '📜',
-  '📄',
-  '📒',
-  '📗',
-  '📕',
-  '🥰',
-  '🤫'
+  final List<String> badges = const <String>[
+    '😁',
+    '🙏',
+    '📚',
+    '📜',
+    '📄',
+    '📒',
+    '📗',
+    '📕',
+    '🥰',
+    '🤫',
   ];
-final List<String> gambaracak = const<String>[
-  'https://images.unsplash.com/photo-1761375002691-c86d054e96be?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1770',
-  'https://plus.unsplash.com/premium_photo-1761211419929-8a793c3b7587?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2232',
-  'https://images.unsplash.com/photo-1761483548106-9f225d1e4313?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1770',
-  'https://images.unsplash.com/photo-1761530622114-5572fb33cdf1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1673',
-  'https://images.unsplash.com/photo-1761502208867-42cc214fd0e6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1770',
-  'https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1770',
-  'https://images.unsplash.com/photo-1761477102698-634668f83bee?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1771',
-  'https://plus.unsplash.com/premium_photo-1759256104503-80fe92559651?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1770',
-  'https://images.unsplash.com/photo-1761389294347-4e7b17731a5b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2076',
-  'https://plus.unsplash.com/premium_photo-1761331960506-9f1bb0e4d029?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2224',
-];
- @override
+  final List<String> gambaracak = const <String>[
+    'https://images.unsplash.com/photo-1761375002691-c86d054e96be?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1770',
+    'https://plus.unsplash.com/premium_photo-1761211419929-8a793c3b7587?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2232',
+    'https://images.unsplash.com/photo-1761483548106-9f225d1e4313?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1770',
+    'https://images.unsplash.com/photo-1761530622114-5572fb33cdf1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1673',
+    'https://images.unsplash.com/photo-1761502208867-42cc214fd0e6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1770',
+    'https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1770',
+    'https://images.unsplash.com/photo-1761477102698-634668f83bee?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1771',
+    'https://plus.unsplash.com/premium_photo-1759256104503-80fe92559651?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1770',
+    'https://images.unsplash.com/photo-1761389294347-4e7b17731a5b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2076',
+    'https://plus.unsplash.com/premium_photo-1761331960506-9f1bb0e4d029?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2224',
+  ];
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -60,9 +61,7 @@ final List<String> gambaracak = const<String>[
                   style: TextStyle(),
                   textAlign: TextAlign.justify,
                 ),
-                SizedBox(
-                  height: 10
-                  ),
+                SizedBox(height: 10),
                 Row(
                   children: [
                     Expanded(
@@ -72,14 +71,14 @@ final List<String> gambaracak = const<String>[
                         child: Container(
                           decoration: BoxDecoration(
                             color: Colors.amber,
-                            borderRadius: BorderRadius.circular(20)
-                            ),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
                           child: Row(
                             children: [
                               Container(
                                 decoration: BoxDecoration(
                                   color: Colors.redAccent,
-                                  borderRadius: BorderRadius.circular(20)
+                                  borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Icon(
                                   Icons.gamepad,
@@ -88,26 +87,29 @@ final List<String> gambaracak = const<String>[
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 4.0,
+                                ),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text('Game Project',style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontWeight: FontWeight.bold
-                                    ),
+                                    Text(
+                                      'Game Project',
+                                      style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                     Text(
-                                      '10 Games',style: TextStyle(
-                                        fontFamily: 'Poppins'
-                                      ),
-                                    )
-                                 ],
+                                      '10 Games',
+                                      style: TextStyle(fontFamily: 'Poppins'),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
                           ),
-                                          ),
+                        ),
                       ),
                     ),
                     Expanded(
@@ -141,7 +143,9 @@ final List<String> gambaracak = const<String>[
                                   children: [
                                     Text(
                                       'Android Project\'s',
-                                      style: TextStyle(fontWeight: FontWeight.bold),
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                     Text('10 APK'),
                                   ],
@@ -154,13 +158,38 @@ final List<String> gambaracak = const<String>[
                     ),
                   ],
                 ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DetailProfil()),
+                    );
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Detail Profile',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Colors.black,
-                      borderRadius: BorderRadius.circular(20)
+                      borderRadius: BorderRadius.circular(20),
                     ),
                     child: Text(
                       'Schadule'.toUpperCase(),
@@ -169,7 +198,7 @@ final List<String> gambaracak = const<String>[
                         fontFamily: 'Poppins',
                         fontSize: 18,
                         letterSpacing: 5,
-                        color: Colors.white
+                        color: Colors.white,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -179,7 +208,7 @@ final List<String> gambaracak = const<String>[
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Container(
-                     // width: double.infinity, //ngasih lebar
+                      // width: double.infinity, //ngasih lebar
                       decoration: BoxDecoration(
                         color: Colors.greenAccent,
                         borderRadius: BorderRadius.circular(20),
@@ -192,7 +221,7 @@ final List<String> gambaracak = const<String>[
                         child: Container(
                           decoration: BoxDecoration(
                             color: Colors.amberAccent,
-                            borderRadius: BorderRadius.circular(20)
+                            borderRadius: BorderRadius.circular(20),
                           ),
                           child: Column(
                             children: <Widget>[
@@ -223,7 +252,7 @@ final List<String> gambaracak = const<String>[
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: Colors.amberAccent
+                            color: Colors.amberAccent,
                           ),
                           child: Column(
                             children: <Widget>[
@@ -254,7 +283,7 @@ final List<String> gambaracak = const<String>[
                         child: Container(
                           decoration: BoxDecoration(
                             color: Colors.amber,
-                            borderRadius: BorderRadius.circular(20)
+                            borderRadius: BorderRadius.circular(20),
                           ),
                           child: Column(
                             children: <Widget>[
@@ -280,9 +309,7 @@ final List<String> gambaracak = const<String>[
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -298,7 +325,7 @@ final List<String> gambaracak = const<String>[
                         letterSpacing: 5,
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
-                        color: Colors.redAccent
+                        color: Colors.redAccent,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -308,19 +335,17 @@ final List<String> gambaracak = const<String>[
                   height: 110,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
-                    children: badges.map((element){
+                    children: badges.map((element) {
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
                           width: 100,
                           height: 100,
-                          decoration: BoxDecoration(
-                            color: Colors.redAccent
-                          ),
+                          decoration: BoxDecoration(color: Colors.redAccent),
                           child: Center(
-                            child: Text('${element}', style: TextStyle(
-                              fontSize: 60
-                              ),
+                            child: Text(
+                              '${element}',
+                              style: TextStyle(fontSize: 60),
                             ),
                           ),
                         ),
@@ -328,17 +353,15 @@ final List<String> gambaracak = const<String>[
                     }).toList(),
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.cyanAccent,
-                    borderRadius: BorderRadius.circular(20)
+                    borderRadius: BorderRadius.circular(20),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical:  8.0),
+                    padding: const EdgeInsets.symmetric(vertical: 8.0),
                     child: Text(
                       'Images',
                       style: TextStyle(
@@ -346,7 +369,7 @@ final List<String> gambaracak = const<String>[
                         letterSpacing: 5,
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
-                        color: Colors.redAccent
+                        color: Colors.redAccent,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -356,18 +379,13 @@ final List<String> gambaracak = const<String>[
                   height: 110,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
-                    children: gambaracak.map((image){
+                    children: gambaracak.map((image) {
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: CircleAvatar(
                           backgroundImage: NetworkImage(image),
                           radius: 50,
-                          child: Center(
-                            child: Image.network(
-                              '${image}',
-                            
-                            ),
-                          ),
+                          child: Center(child: Image.network('${image}')),
                         ),
                       );
                     }).toList(),
@@ -375,17 +393,19 @@ final List<String> gambaracak = const<String>[
                 ),
                 SizedBox(
                   height: 110,
-                  child: ListView.builder(itemCount: gambaracak.length, itemBuilder: (BuildContext context, int index){
-                    return Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: CircleAvatar(
-                        backgroundImage: NetworkImage('${gambaracak[index]}'),
-                        radius: 50,
-                      ),
-                    );
-                   }
+                  child: ListView.builder(
+                    itemCount: gambaracak.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage('${gambaracak[index]}'),
+                          radius: 50,
+                        ),
+                      );
+                    },
                   ),
-                )
+                ),
               ],
             ),
           ),
